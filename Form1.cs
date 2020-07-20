@@ -137,6 +137,12 @@ namespace CSVDataFinder
                 MessageBox.Show("File entered does not exist.", "PEBCAK");
                 return false;
             }
+            if (!txtFileToUse.Text.EndsWith(".csv"))
+            {
+                MessageBox.Show("This application is only designed to work with .csv (comma separated values) files.",
+                    "PEBCAK");
+                return false;
+            }
             #endregion
             
             #region txtColumnNumber
